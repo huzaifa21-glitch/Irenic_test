@@ -8,7 +8,7 @@ import MyChatsIcon from '../../assets/gpt-svgs/chat-small.svg';
 import SavedChatsIcon from '../../assets/gpt-svgs/saved.svg';
 import GPTIcon from '../../assets/gpt-svgs/gpt-small.svg';
 
-const ChatSidebar = ({ chats, onChatSelect,selectedChatIndex }) => {
+const ChatSidebar = ({ chats, onChatSelect, selectedChatIndex }) => {
     console.log(chats);
     const [selectedTab, setSelectedTab] = useState('myChats');
     const [searchTerm, setSearchTerm] = useState('');
@@ -29,7 +29,7 @@ const ChatSidebar = ({ chats, onChatSelect,selectedChatIndex }) => {
     };
 
     const handleChatSelect = (index) => {
-        onChatSelect(index); // Call the parent component's function to set the selected chat index
+        onChatSelect(index);
     };
 
 
@@ -49,27 +49,27 @@ const ChatSidebar = ({ chats, onChatSelect,selectedChatIndex }) => {
                     className={`tab-button ${selectedTab === 'myChats' ? 'active' : ''}`}
                     onClick={() => handleTabClick('myChats')}
                 >
-                    <img src={MyChatsIcon} alt="My Chats Icon" className="tab-icon" />
-                    My Chats
+                    <img src={MyChatsIcon} alt="My Chats Icon" className="tab-icon2" />
+                    Chats
                 </button>
                 <button
                     className={`tab-button ${selectedTab === 'savedChats' ? 'active' : ''}`}
                     onClick={() => handleTabClick('savedChats')}
                 >
                     <img src={SavedChatsIcon} alt="Saved Chats Icon" className="tab-icon" />
-                    Saved Chats
+                    Saved
                 </button>
             </div>
 
             {/* Search Bar */}
             <div className='search-container'>
                 <div class="group">
-                    <img src={SearchIcon} alt="Filter Icon" className="icon" />
+                    <img src={SearchIcon} alt="search Icon" className="search-icon" />
                     <input placeholder="Search" onChange={handleSearch} type="search" class="input"></input>
                 </div>
                 <img src={FilterIcon} alt="Filter Icon" className="filter-icon" />
             </div>
-        {/* Title Flatlist */}
+            {/* Title Flatlist */}
             <div className="chat-list">
                 {filteredChats.map((chat, index) => (
                     <div
@@ -78,10 +78,16 @@ const ChatSidebar = ({ chats, onChatSelect,selectedChatIndex }) => {
                         onClick={() => handleChatSelect(index)}
 
                     >
+
                         <div className="text">
-                            <h3 className="heading">{chat.heading}</h3>
-                            <p className="subheading">{chat.conversation[0].prompt}</p>
+                            <div className="heading-time">
+                                <h3 className="heading">{chat.heading}</h3>
+                                <p className="time">{chat.time}</p>
+                            </div>
+                            <p className="subheading truncate">{chat.conversation[0].prompt}</p>
                         </div>
+
+
                     </div>
                 ))}
             </div>

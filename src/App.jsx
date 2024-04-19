@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-    {/* <Panel></Panel> */}
-    <ChatSidebar chats={data}></ChatSidebar>
+    <Panel></Panel>
+    {/* <ChatSidebar chats={data}></ChatSidebar> */}
    </>
   )
 }

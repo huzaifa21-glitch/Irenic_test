@@ -1,6 +1,6 @@
 import React from 'react';
-import './panel.css'; // You can style this component in a separate CSS file
-import Logo from '../../assets/gpt-svgs/Logo.svg';
+import './panel.css'; 
+import Logo from '../../assets/gpt-svgs/Logo-green.svg';
 import Chat from '../../assets/gpt-svgs/Chat.svg';
 import Sub from '../../assets/gpt-svgs/subs.svg';
 import Explore from '../../assets/gpt-svgs/explore.svg';
@@ -17,15 +17,15 @@ const Panel = () => {
             </div>
             <div className="icons-container">
 
-                <img src={Chat} className="icon" alt="React logo" />
-                <img src={Sub} className="icon" alt="React logo" />
-                <img src={Explore} className="icon" alt="React logo" />
-                <img src={Settings} className="icon" alt="React logo" />
+                <img src={Chat} className="user-image" alt="React logo" />
+                <img src={Sub} className="user-image" alt="React logo" />
+                <img src={Explore} className="user-image" alt="React logo" />
+                <img src={Settings} className="user-image" alt="React logo" />
 
             </div>
             <div className="user-container">
                 <img src={user.photo} alt="User" className="user-image" />
-                <img src={Logout} className="icon" alt="React logo" />
+                <img src={Logout} className="user-image" alt="React logo" />
                 <img src={DarkIcon} className="dark-icon" alt="React logo" />
             </div>
         </div>

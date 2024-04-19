@@ -2,6 +2,7 @@ export const data = {
     "conversations" : [
       {
         "heading": "Conversation 1",
+        "time":"Now",
         "conversation": [
           {
             "prompt": "Hello!",
@@ -23,6 +24,7 @@ export const data = {
       },
       {
         "heading": "Conversation 2",
+        "time":"Now",
         "conversation": [
           {
             "prompt": "Hey!",
@@ -44,6 +46,7 @@ export const data = {
       },
       {
         "heading": "Conversation 3",
+        "time":"Mon",
         "conversation": [
           {
             "prompt": "Hello, ChatGPT!",
@@ -65,6 +68,7 @@ export const data = {
       },
       {
         "heading": "E-commerce Issue",
+        "time":"Sat",
         "conversation": [
           {
             "prompt": "I ordered a product but haven't received it.",
@@ -86,6 +90,7 @@ export const data = {
       },
       {
         "heading": "User Persona Research",
+        "time":"18 Dec",
         "conversation": [
           {
             "prompt": "I'm conducting user persona research. Can you provide some insights?",
@@ -107,6 +112,7 @@ export const data = {
       },
       {
         "heading": "Video Script Intro",
+        "time":"16 Dec",
         "conversation": [
           {
             "prompt": "I need help writing an intro for my video script.",
@@ -128,6 +134,7 @@ export const data = {
       },
       {
         "heading": "Customer Service Complaint",
+        "time":"15 Dec",
         "conversation": [
           {
             "prompt": "I had a bad experience with your customer service.",
@@ -145,6 +152,7 @@ export const data = {
       },
       {
         "heading": "Technical Support Inquiry",
+        "time":"15 Dec",
         "conversation": [
           {
             "prompt": "I'm having trouble accessing my account.",
