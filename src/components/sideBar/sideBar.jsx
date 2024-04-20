@@ -9,7 +9,7 @@ import SavedChatsIcon from '../../assets/gpt-svgs/saved.svg';
 import GPTIcon from '../../assets/gpt-svgs/gpt-small.svg';
 
 const ChatSidebar = ({ chats, onChatSelect, selectedChatIndex }) => {
-    console.log(chats);
+    // console.log(chats);
     const [selectedTab, setSelectedTab] = useState('myChats');
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredChats, setFilteredChats] = useState(chats.conversations);
@@ -28,9 +28,6 @@ const ChatSidebar = ({ chats, onChatSelect, selectedChatIndex }) => {
         setFilteredChats(filtered);
     };
 
-    const handleChatSelect = (index) => {
-        onChatSelect(index);
-    };
 
 
     return (
@@ -75,7 +72,7 @@ const ChatSidebar = ({ chats, onChatSelect, selectedChatIndex }) => {
                     <div
                         key={index}
                         className={`chat-item ${selectedChatIndex === index ? 'selected' : ''}`}
-                        onClick={() => handleChatSelect(index)}
+                        // onClick={() => handleChatSelect(index)}
 
                     >
 

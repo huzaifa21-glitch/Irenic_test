@@ -275,7 +275,9 @@
   .search-container {
     flex-direction: column;
     align-items: flex-start;
+    flex-direction: row;
     margin-top: 10px;
+    justify-content: center;
   }
 
   

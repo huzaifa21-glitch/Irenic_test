@@ -15,14 +15,18 @@
 .component3 {
   flex: 1;
 }
+
 @media screen and (max-width: 767px) {
   .container {
     flex-wrap: wrap;
   }
 
-  .component1,
   .component2,
   .component3 {
     flex-basis: 100%; 
+  }
+
+  .component1 {
+    display: none;
   }
 }

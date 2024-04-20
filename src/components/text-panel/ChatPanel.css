@@ -82,6 +82,9 @@
   justify-content: space-between;
   margin-left: 20px;
   margin-bottom: 10px;
+  /* background-color: ;
+  padding: 2px;
+  border-radius: 20px; */
  
 }
 .icon-right{
@@ -136,7 +139,7 @@
 .response-text {
   margin-left: 20px;
   padding: 10px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   flex-grow: 1; 
   margin-top: 10px;  
   text-align: left;
@@ -250,7 +253,7 @@
     flex: 1 1 auto;
     background-color: #282A2E;
     padding: 15px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
 
   .chatbox {

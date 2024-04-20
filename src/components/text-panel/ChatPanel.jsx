@@ -24,9 +24,9 @@ const ChatPanel = ({ data, conversationIndex }) => {
   const [conversation1, setConversation] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedIcon, setSelectedIcon] = useState(null);
+  const [selectedIcon, setSelectedIcon] = useState(Array(conversation.conversation.length).fill(null));
   const chatboxRef = useRef(null);
-  
+
   useEffect(() => {
     setConversation(data.conversations[0].conversation);
     chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
@@ -44,13 +44,14 @@ const ChatPanel = ({ data, conversationIndex }) => {
     setUserInput('');
   };
 
-  const toggleFeedbackIcon = (icon) => {
-    if (selectedIcon === icon) {
-      setSelectedIcon(null);
-    } else {
-      setSelectedIcon(icon);
-    }
+  const toggleFeedbackIcon = (messageIndex, icon) => {
+    setSelectedIcon((prevIcons) => {
+      const updatedIcons = { ...prevIcons };
+      updatedIcons[messageIndex] = icon;
+      return updatedIcons;
+    });
   };
+
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -87,15 +88,16 @@ const ChatPanel = ({ data, conversationIndex }) => {
                         <div className="response-icons">
                           <div className='icon-left'>
                             <img
-                              src={selectedIcon === 'good' ? GoodActive : GoodInactive}
+                              src={selectedIcon[messageIndex] === 'good' ? GoodActive : GoodInactive}
                               alt="Good Icon"
-                              onClick={() => toggleFeedbackIcon('good')}
+                              onClick={() => toggleFeedbackIcon(messageIndex, 'good')}
                             />
                             <img
-                              src={selectedIcon === 'bad' ? BadActive : BadInactive}
+                              src={selectedIcon[messageIndex] === 'bad' ? BadActive : BadInactive}
                               alt="Bad Icon"
-                              onClick={() => toggleFeedbackIcon('bad')}
+                              onClick={() => toggleFeedbackIcon(messageIndex, 'bad')}
                             />
+
                           </div>
                           <div className='icon-right'>
                             <img src={ResponseIcon} alt="Response Icon" />
@@ -115,10 +117,10 @@ const ChatPanel = ({ data, conversationIndex }) => {
                     type="text"
                     value={userInput}
                     onChange={handleInputChange}
-                    placeholder="Type your message..."
+                    placeholder="Ask questions, or type ‘/’ for commands"
                     className="user-input"
                   />
-                  <img src={sendIcon} alt="Send Icon" className="send-icon" />
+                  <img src={sendIcon} alt="Send Icon" className="send-icon" onClick={handleSubmit} />
                 </form>
                 <div className='mic-div'>
                   <img src={MicIcon} alt="Mic Icon" className="mic-icon" />

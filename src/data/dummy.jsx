@@ -51,14 +51,14 @@ export const data = {
           
           },
           {
-            "response": "Our user base primarily consists of..."
+            "response": "Our user base primarily consists of curious minds seeking innovative solutions to everyday challenges."
           },
           {
             "prompt": "Do we have any data on user preferences or behaviors?",
           
           },
           {
-            "response": "Yes, we have data indicating that..."
+            "response": "Yes, we have data indicating that our user engagement is steadily increasing month over month, demonstrating a robust and sustained interest in our platform and services. This upward trend not only reflects the effectiveness of our marketing efforts but also underscores the value proposition we offer to our users, resulting in greater satisfaction and loyalty within our user base."
           },
           {
             "prompt": "Thank you for the insights!",
