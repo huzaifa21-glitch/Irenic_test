@@ -12,6 +12,11 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
   
+  .chat-panel[disabled], .chat-sidebar[disabled] {
+    pointer-events: none;
+    filter: blur(5px);
+  }
+  
   .modal-header {
     display: flex;
     flex-direction: column;

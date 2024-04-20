@@ -55,15 +55,24 @@ const ChatPanel = ({ data, conversationIndex }) => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.querySelector('.chat-panel').classList.add('blur-background');
-    document.querySelector('.chat-sidebar').classList.add('blur-background');
+    const chatPanel = document.querySelector('.chat-panel');
+    const chatSidebar = document.querySelector('.chat-sidebar');
+    chatPanel.classList.add('blur-background');
+    chatSidebar.classList.add('blur-background');
+    chatPanel.setAttribute('disabled', true);
+    chatSidebar.setAttribute('disabled', true);
   };
-
+  
   const closeModal = () => {
     setIsModalOpen(false);
-    document.querySelector('.chat-panel').classList.remove('blur-background');
-    document.querySelector('.chat-sidebar').classList.remove('blur-background');
+    const chatPanel = document.querySelector('.chat-panel');
+    const chatSidebar = document.querySelector('.chat-sidebar');
+    chatPanel.classList.remove('blur-background');
+    chatSidebar.classList.remove('blur-background');
+    chatPanel.removeAttribute('disabled');
+    chatSidebar.removeAttribute('disabled');
   };
+  
 
   return (
     <>
