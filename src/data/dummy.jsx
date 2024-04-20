@@ -132,7 +132,7 @@ export const data = {
         ]
       },
       {
-        "heading": "Conversation 1",
+        "heading": "Conversation Heading 1",
         "time":"Now",
         "conversation": [
           {
@@ -165,7 +165,7 @@ export const data = {
         ]
       },
       {
-        "heading": "Conversation 2",
+        "heading": "Conversation Heading  2",
         "time":"Now",
         "conversation": [
           {
@@ -187,7 +187,7 @@ export const data = {
         ]
       },
       {
-        "heading": "Conversation 3",
+        "heading": "Conversation Heading  3",
         "time":"Mon",
         "conversation": [
           {
