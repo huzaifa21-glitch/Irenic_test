@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './sideBar.css'; // You can style this component in a separate CSS file
+import './sideBar.css'; 
 import ChatIcon from '../../assets/gpt-svgs/add.svg';
 import SearchIcon from '../../assets/gpt-svgs/search.svg';
 import FilterIcon from '../../assets/gpt-svgs/Filter.svg';
@@ -63,9 +63,9 @@ const ChatSidebar = ({ chats, onChatSelect, selectedChatIndex }) => {
 
             {/* Search Bar */}
             <div className='search-container'>
-                <div class="group">
+                <div className="group">
                     <img src={SearchIcon} alt="search Icon" className="search-icon" />
-                    <input placeholder="Search" onChange={handleSearch} type="search" class="input"></input>
+                    <input placeholder="Search" onChange={handleSearch} type="search" className="search-input"></input>
                 </div>
                 <img src={FilterIcon} alt="Filter Icon" className="filter-icon" />
             </div>
