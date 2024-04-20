@@ -170,6 +170,9 @@
     border-radius: 8px;
     transition: background-color 0.3s ease;
   }
+  /* .chat-item:hover{
+    background-color:#3F424A;;
+  } */
   
   .text {
     flex: 1;
@@ -215,7 +218,7 @@
   line-height: normal;
   overflow: hidden;
   white-space: nowrap;
-  width: 100%; 
+  width: 50vh; 
   text-align: left; 
 }
 
@@ -238,5 +241,142 @@
     background-color: #f1f1f1; 
     border-radius: 4px; 
 }
+@media screen and (max-width: 767px) {
+ 
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+ 
+  .icons {
+    margin-top: 10px;
+  }
+
+ 
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
   
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
   
+  .tab-button {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+  }
+
+  
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+
+  .chat-list {
+    max-height: calc(100vh - 200px);
+  }
+
+  .subheading {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .chat-sidebar {
+    width: 300px;
+    transition: width 0.5s ease; 
+  }
+
+  .header {
+    padding: 10px;
+    transition: padding 0.5s ease; 
+  }
+
+  .title {
+    font-size: 20px;
+    transition: font-size 0.5s ease; 
+  }
+
+  .chat-icon {
+    width: 40px;
+    transition: width 0.5s ease; 
+  }
+
+  .tabs {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    transition: margin 0.5s ease;
+  }
+
+  .tab-button {
+    width: 45%;
+    margin: 5px;
+    transition: width 0.5s ease, margin 0.5s ease;
+  }
+
+  .search-container {
+    margin-top: 15px;
+    transition: margin 0.5s ease;
+    width: calc(100% - 20px);
+  }
+
+  .search-input {
+    height: 50px;
+    padding: 0 2.5rem;
+    font-size: 16px;
+    transition: height 0.5s ease, padding 0.5s ease, font-size 0.5s ease;
+  }
+
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+
+  .filter-icon {
+    width: 50px;
+    transition: width 0.5s ease;
+  }
+
+  .chat-list {
+    max-height: calc(100vh - 250px);
+    transition: max-height 0.5s ease;
+    overflow-x: hidden;
+  }
+
+  .heading {
+    font-size: 14px;
+    transition: font-size 0.5s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .subheading {
+    font-size: 12px;
+    transition: font-size 0.5s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+

@@ -84,6 +84,9 @@
     padding: 10px;
     margin-bottom: 10px;
   }
+  .sub-card:hover{
+    background-color:#282A2E ;
+  }
   .sub-card p{
     font-size: 12px;
     font-weight: 400;
@@ -110,4 +113,22 @@
   .blur-background {
     filter: blur(5px);
   }
+  @media screen and (max-width: 767px) {
+    .model {
+      width: 70%;
+      max-width: 300px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
